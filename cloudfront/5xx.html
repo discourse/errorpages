@@ -1,1 +1,105 @@
-5xx
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <link rel="icon" href="favicon.ico" />
+  <meta content='en' name='language'>
+  <meta content='width=device-width, initial-scale=1' name='viewport'>
+  <meta name='robots' content='noindex,nofollow' />
+  <title>Error</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="100" style="font-size:30px"><text y="30">😭</text></svg>'), auto;
+    }
+    .error-wrapper {
+      display: flex;
+      height: 100vh;
+      font-family: Helvetica, Arial, sans-serif;
+      padding: 20px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    
+    .error-content {
+      margin-right: 5vw;
+      flex: 1 1 auto;
+      text-align: left;
+      width: 20%;
+    }
+    
+    .latest-tweets {
+      flex: 1 1 auto;
+      overflow-y: scroll;
+      margin-top: 15px;
+      position: relative;
+      width: 60%;
+    }
+    
+    .bottom-fade {
+      width: 100%;
+
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); 
+      height: 20vh;
+      pointer-events: none;
+      position: fixed;
+      bottom: 0;
+    }
+    
+    .emoji {
+      font-size: 5em;
+    }
+    
+    h1 {
+      margin: 20px 0 10px 0;
+      font-size: 3em;
+      line-height: 1.15;
+    }
+    
+    p {
+      font-size: 1.25em;
+      line-height: 1.5;
+    }
+
+    .error-code {
+      font-size: 1em; 
+      color: #999;
+      margin-top: 10px;
+    }
+    
+    @media screen and (max-width: 760px) {
+      .error-wrapper {
+        flex-wrap: wrap;
+      }
+      .error-content {
+        text-align: center;
+        margin-bottom: 40px;
+        margin-right: 0;
+      }
+      .latest-tweets {
+        flex: 1 1 100%;
+      }
+      h1 {
+        font-size: 2em;
+      }
+    }  
+  </style>
+</head>
+<body>   
+  <div class="error-wrapper">   
+    <div class="error-content">                
+      <h1>Sorry, something has gone wrong. </h1>
+      <p>Our administrators have been notified, and we'll be back shortly. </p> 
+      <!--<p class="error-code">Status code: 500</p>-->
+    </div>
+    <div class="latest-tweets">
+      <a class="twitter-timeline" data-theme="light" data-show-replies="false" data-tweet-limit="5" href="https://twitter.com/discourse?ref_src=twsrc%5Etfw">Tweets by discourse</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  
+    </div>
+    <div class="bottom-fade"></div>
+    </div>
+</body>
+  
